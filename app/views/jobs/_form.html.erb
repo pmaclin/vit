@@ -1,6 +1,10 @@
-<%= simple_form_for @job do |f| %>
+<%= simple_form_for(@job) do |f| %>
+<div class="inputs">
   <%= f.input :title, label: "Provide a title for this job" %>
   <%= f.input :description, label: "Describe what the job entails" %>
-  <%= f.input :value, label: "The relative value of this job" %>
+  <%= f.input :value, collection: 0..100, label: "The relative value of this job" %>
+</div>
+<div class="form-actions">
   <%= f.button :submit %>
+</div>
 <% end %>

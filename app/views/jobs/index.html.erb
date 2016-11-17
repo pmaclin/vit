@@ -2,10 +2,9 @@
   <h1> Here's a list of all jobs </h1>
   <% @jobs.each do |job| %>
     <h2><%#= job.id %><%= link_to job.title, job %></h2>
-    <p><%= job.description %></p>
-    <p><%= job.value %></p>
-    <p><%= job.created_at %></p>
+    <p>Description: <%= job.description %></p>
+    <p>Created: <%= job.created_at %></p>
+    <p>Value:<font color="red"> <%= job.value %></font></p>
   <% end %>
 
-  <%= link_to "Create a New Job", new_job_path  %>
 </div>
