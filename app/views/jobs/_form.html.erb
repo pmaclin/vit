@@ -3,6 +3,9 @@
   <%= f.input :title, label: "Provide a title for this job" %>
   <%= f.input :description, label: "Describe what the job entails" %>
   <%= f.input :value, collection: 0..100, label: "The relative value of this job" %>
+  <%= f.input :time, collection: 0...50, label: "Time earned in hours" %>
+  <%= f.input :verified, as: :radio_buttons, checked_value: true, unchecked_value: false %>
+  <%= f.input :employed, collection: 0..50, label: "Number of people doing this job" %>
 </div>
 <div class="form-actions">
   <%= f.button :submit %>
