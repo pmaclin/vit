@@ -1,3 +1,5 @@
+<% if user_signed_in?  %>
+
 <div class="col-md-8 col-md-offset-0">
   <h2>#<%= @job.id %>: <%= @job.title %><small> (Job ID# <%= @job.id %>001)</small></h2>
   <p>Description: <%= @job.description %></p>
@@ -6,18 +8,16 @@
   <p>Total Time Earned in Hours: <%= @job.time %></p>
   <p>Added Status: <%= @job.added %></p>
 
-
   <div class="col-md-4 col-md-offset-8">
     <%= link_to "Back", root_path %>
     <%= link_to "Edit", edit_job_path(@job) %>
     <%= link_to "Delete", job_path(@job), method: :delete, data: { confirm: "Wait! Are you sure?!?"} %>
   </div>
   <div class="col-md-4 col-md-offset-8">
-    <%= link_to "Add Job", new_myjob_path( :job_id => params[:id] ), class: "btn btn-success" %>
+    <%= link_to "Add This Job", new_myjob_path( :job_id => params[:id] ), class: "btn btn-success" %>
   </div>
-
-
-
-
-
 </div>
+
+<% else %>
+  <%= render 'welcome_page' %>
+<% end %>
