@@ -6,6 +6,7 @@
   <%= f.input :time, collection: 0...50, label: "Time earned in hours" %>
   <%= f.input :verified, as: :radio_buttons, checked_value: true, unchecked_value: false %>
   <%= f.input :employed, collection: 0..50, label: "Number of people doing this job" %>
+  <%#= f.input :added, as: :radio_buttons, checked_value: true, unchecked_value: false %>
 </div>
 <div class="form-actions">
   <%= f.button :submit %>

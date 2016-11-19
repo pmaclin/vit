@@ -1,0 +1,9 @@
+<%= simple_form_for(@myjob) do |f| %>
+  <div class="form-inputs">
+    <%= f.hidden_field :user_id, label: "User ID" %>
+    <%= f.hidden_field :job_id, label: "Job ID" %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

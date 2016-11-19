@@ -1,5 +1,5 @@
 <div class="col-md-8 col-md-offset-0">
-  <h1> Volunteer. Earn Points. Get Swag. It's Simple! </h1>
+  <h1> Volunteer. Earn. Get Swag. Simple! </h1>
   <h2>Jobs List</h2>
   <% @jobs.each do |job| %>
     <h3><%= link_to job.title, job %><small> (Job ID# <%= job.id %>001)</small></h3>
@@ -7,8 +7,9 @@
     <p>Points Per Hour:<font color="darkblue"> <%= job.value %></font></p>
     <!-- <p>Accumulated Time in Hours:<font color="darkblue"> <%#= job.time %></font></p> -->
     <!-- <p>Verified?: <%#= job.verified %> </p> -->
-    <p>Hours Earned So Far: <%= job.time %></p>
+    <!-- <p>Hours Earned So Far: <%= job.time %></p>
     <p>People doing this job: <%= job.employed %></p>
+    <p>Added Status: <%= job.added %></p> -->
   <% end %>
 
 </div>

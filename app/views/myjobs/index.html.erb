@@ -1,0 +1,15 @@
+<div class="col-md-8 col-md-offset-0">
+  <h2>Manage Your Jobs</h2>
+  <% @myjobs.each do |myjob| %>
+      <h3><%= myjob.job.try(:title) %><small>(Job ID# <%= current_user.id %>-<%= myjob.id %>-<%= myjob.job_id %>001)</small></h3>
+      <p>Description: <%= myjob.job.try(:description) %></p>
+      <p>Point Value: <font color="darkblue"><%= myjob.job.try(:value) %></font></p>
+
+      <div class="col-md-8 col-md-offset-0">
+        <%= link_to "Back", root_path %>
+        <%#= link_to "Edit", edit_job_path(@job) %>
+        <%= link_to "Delete", myjob, method: :delete, data: { confirm: "Wait! Are you sure you want to delete this job?"} %>
+      </div>
+  <% end %>
+
+</div>
