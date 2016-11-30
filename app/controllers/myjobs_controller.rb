@@ -61,7 +61,7 @@ def find_myjob
 end
 
 def myjob_params
-  params.require(:myjob).permit(:job_id)
+  params.require(:myjob).permit(:job_id, :hours)
 end
 
 end

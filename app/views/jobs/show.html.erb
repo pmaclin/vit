@@ -7,16 +7,17 @@
   <p>Point Value: <%= @job.value %></p>
   <p>Total Time Earned in Hours: <%= @job.time %></p>
   <p>Added Status: <%= @job.added %></p>
+</div>
 
-  <div class="col-md-4 col-md-offset-8">
+  <div class="col-md-8 col-md-offset-0">
     <%= link_to "Back", root_path %>
     <%= link_to "Edit", edit_job_path(@job) %>
     <%= link_to "Delete", job_path(@job), method: :delete, data: { confirm: "Wait! Are you sure?!?"} %>
   </div>
-  <div class="col-md-4 col-md-offset-8">
+
+  <div class="col-md-8 col-md-offset-0">
     <%= link_to "Add This Job", new_myjob_path( :job_id => params[:id] ), class: "btn btn-success" %>
   </div>
-</div>
 
 <% else %>
   <%= render 'welcome_page' %>
